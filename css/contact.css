@@ -1,0 +1,55 @@
+form {
+  background-color: unset;
+  border: 1px solid #b25e39;
+  max-width: 50vw;
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(254, 253, 233, 0.2);
+  border-radius: 5px;
+}
+@media screen and (max-width: 720px) {
+  form {
+    max-width: unset;
+  }
+}
+form button {
+  border: none;
+  border-radius: 15px;
+  padding: 10px 15px;
+  width: 10rem;
+  align-self: center;
+  background-color: #E6E6E6;
+}
+form button:hover {
+  background-color: #b8b8b8;
+}
+form label {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+form input, form textarea {
+  width: 20rem;
+  border: none;
+  border-radius: 15px;
+  background-color: #E6E6E6;
+  padding: 10px 15px;
+}
+@media screen and (max-width: 470px) {
+  form input, form textarea {
+    max-width: 15rem;
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 380px) {
+  form input, form textarea {
+    max-width: 10rem;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  text-align: left;
+}

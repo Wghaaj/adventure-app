@@ -1,0 +1,26 @@
+.img-container {
+  background-size: cover;
+  background-image: url(/images/alps.jpg);
+  width: 100vw;
+  height: 30rem;
+  filter: blur(8px);
+}
+
+.t-white {
+  color: white;
+}
+
+.img-container-text {
+  position: absolute;
+  top: 20rem;
+  left: 60px;
+}
+@media screen and (max-width: 992px) {
+  .img-container-text {
+    left: 30px;
+  }
+}
+
+iframe {
+  width: 100%;
+}

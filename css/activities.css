@@ -1,0 +1,92 @@
+.number {
+  background-color: #473D3A;
+  color: white;
+  padding: 10px 20px;
+  width: fit-content;
+  align-items: center;
+  border-radius: 10px;
+  height: fit-content;
+  margin: 0;
+  grid-area: a;
+}
+.number p {
+  margin: 0;
+}
+
+.place-img {
+  margin-left: 30px;
+  margin-right: 0;
+  grid-area: b;
+}
+@media screen and (max-width: 992px) {
+  .place-img {
+    margin-left: 15px;
+  }
+}
+.place-img img {
+  max-width: 100%;
+}
+@media screen and (max-width: 500px) {
+  .place-img img {
+    overflow: hidden;
+    max-width: 100%;
+  }
+}
+
+.mt-30 {
+  margin-top: 30px;
+}
+@media screen and (max-width: 992px) {
+  .mt-30 {
+    margin-top: 15px;
+  }
+}
+
+.place-details {
+  flex-direction: column;
+  text-align: left;
+  margin-left: 30px;
+  gap: 15px;
+  grid-area: c;
+}
+@media screen and (max-width: 992px) {
+  .place-details {
+    margin-left: 0;
+    margin-top: 15px;
+  }
+}
+.place-details p, .place-details .more {
+  margin: 0;
+}
+
+.more {
+  height: fit-content;
+  padding: 10px 15px;
+  background-color: #b25e39;
+  border-radius: 30px;
+  width: fit-content;
+  border: none;
+}
+.more:hover {
+  background-color: #473D3A;
+  color: white;
+}
+
+.place-div {
+  margin-left: 0;
+  grid-template-areas: "a b c";
+  margin-top: 30px;
+}
+@media screen and (max-width: 992px) {
+  .place-div {
+    grid-template-areas: "a b" "c c";
+    margin-top: 60px;
+  }
+}
+@media screen and (max-width: 680px) {
+  .place-div {
+    grid-template-areas: "a" "b" "c";
+    margin-top: 30px;
+    gap: 30px;
+  }
+}/*# sourceMappingURL=activities.css.map */
