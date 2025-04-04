@@ -1,1 +1,94 @@
 @use 'variables' as *;
+
+.number {
+    background-color: #473D3A;
+    color: white;
+    padding: 10px 20px;
+    width: fit-content;
+    align-items: center;
+    border-radius: 10px;
+    height: fit-content;
+    margin: 0;
+    grid-area: a;
+
+    p {
+        margin: 0;
+    }
+}
+
+.place-img {
+    margin-left: $phone-common-margin;
+    margin-right: 0;
+    grid-area: b;
+    @media screen and (max-width: 992px) {
+        margin-left: calc($phone-common-margin / 2);
+    }
+    img {
+        max-width: 100%;
+
+        @media screen and (max-width:500px) {
+            // max-height: 10vh;
+            overflow: hidden;
+            max-width: 100%;
+        }
+    }
+}
+
+.mt-30 {
+    margin-top: $phone-common-margin;
+
+    @media screen and (max-width: 992px) {
+        margin-top: calc($phone-common-margin / 2);
+    }
+}
+
+.place-details {
+    flex-direction: column ;
+    text-align: left;
+    margin-left: $phone-common-margin;
+    gap: 15px;
+    grid-area: c;
+
+    @media screen and (max-width:992px){
+        margin-left: 0;
+        margin-top: 15px;
+    }
+
+    p, .more {
+        margin: 0;
+    }
+}
+
+.more {
+    height: fit-content;
+    padding: 10px 15px;
+    background-color: $brown;
+    border-radius: 30px;
+    width: fit-content;
+    border: none;
+
+    &:hover {
+        background-color: #473D3A;
+        color: white;
+    }
+}
+
+.place-div {
+    margin-left: 0;
+    grid-template-areas: "a b c";
+    margin-top: $phone-common-margin;
+
+    @media screen and (max-width:992px) {
+        grid-template-areas: "a b"
+        "c c";
+        margin-top: $common-margin;
+    }
+
+    @media screen and (max-width: 680px) {
+        grid-template-areas: "a"
+        "b"
+        "c";
+        margin-top: $phone-common-margin;
+        gap: $phone-common-margin;
+    }
+}

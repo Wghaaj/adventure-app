@@ -1,1 +1,95 @@
 @use 'variables' as *;
+
+.d-flex {
+    align-items: center;
+}
+
+.name {
+    padding-bottom: 5px;
+    padding-left: 10px;
+    margin: 0;
+}
+
+.img-container {
+    background-size: cover;
+    background-image: url(/images/alps.jpg);
+    width: 100vw;
+    height: 40rem;
+    filter: blur(8px);
+    filter: brightness(0.5);
+    position: relative; 
+}
+
+.img-container-content {
+    position: absolute;
+    top: 30vh;
+    left: 50vw;
+    transform: translateX(-50%);
+    color: white;
+    width: fit-content;
+
+    img, svg {
+        height: 25px;
+        margin: 0;
+    }
+
+}
+
+
+.more {
+    height: fit-content;
+    padding: 10px 15px;
+    background-color: $brown;
+    border-radius: 30px;
+    width: fit-content;
+    border: none;
+    
+    a {
+        color: black;
+        text-decoration: none;
+        
+        &:hover {
+            color: white;
+        }
+    }
+    &:hover {
+        background-color: #473D3A;
+    }
+}
+
+.desc {
+    margin-bottom: 10px;
+}
+
+.d-grid {
+    display: grid;
+}
+
+.description-items {
+    position: relative;
+    grid-template-areas: "a b c d";
+    gap: $phone-common-margin;
+
+    @media screen and (max-width: 1000px) {
+        grid-template-areas: "a b"
+        "c d";
+        gap: calc($phone-common-margin / 2);
+    }
+}
+
+.content-a {
+    grid-area: a;
+}
+
+
+.content-b {
+    grid-area: b;
+}
+
+.content-c {
+    grid-area: c;
+}
+
+.content-d {
+    grid-area: d;
+}
