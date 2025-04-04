@@ -1,3 +1,5 @@
+//information about all the places
+
 const places = [
     {
         title: "Road cycling",

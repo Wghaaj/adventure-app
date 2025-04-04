@@ -1,18 +1,21 @@
-//get id nfrom the url 
+//get id from the url 
 const urlParams = new URLSearchParams(window.location.search);
 const placeId = urlParams.get('id');
 
-const place = places.find(p => p.id === Number(placeId)); // cast placeId to number
+const place = places.find(p => p.id === Number(placeId)); 
 
 const wrapper = document.getElementById('wrapper');
+const documentTitle = document.getElementById('title');
 
 if (place) {
+    //change the name of the page 
+    documentTitle.textContent = place.title;
     //create image container and set backgorund image for the image associated with place id 
     const imgContainer = document.createElement('div');
     imgContainer.classList.add('img-container');
     imgContainer.style.backgroundImage = `url(${place.image})`;
 
-    //creating content
+    //create content
     const imgContainerContent = document.createElement('div');
     imgContainerContent.classList.add('img-container-content');
     imgContainerContent.classList.add('p-30');
